@@ -1,1 +1,9 @@
-<h1>Figures Index</h1>
+<h1>Figures</h1>
+<% @figures.each do |figure| %>
+  <a href="/figures/<%= figure.id %>"><%= figure.name %></a>
+  <% end %>
+  <br>
+
+
+<a class="button" href="figures/new">New FIGURES HERE</a>
+<a class="button" href="/figures">View Figures</a>
