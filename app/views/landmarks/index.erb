@@ -1,1 +1,6 @@
-<h1>Landmarks Index</h1>
+<h1>Landmarks</h1>
+<% @landmarks.all.each do |landmark| %>
+  <label for="landmark_name"><%= landmark.name %></label>
+  <label for="landmark_year_completed"><%= landmark.year_completed %></label>
+  <br>
+<% end %>

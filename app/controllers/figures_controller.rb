@@ -9,7 +9,7 @@ class FiguresController < ApplicationController
     erb :'/figures/new'
   end
 
-  post '/posts' do
+  post '/figures' do
     @figure = Figure.create(params["figure"])
     redirect to "/figures/#{@figure.id}"
   end
@@ -24,7 +24,7 @@ class FiguresController < ApplicationController
     erb :'/figures/edit'
   end
 
-  patch '/posts/:id' do
+  patch '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
     @figure.name = params[:name]
     #probs needa assign landmarks here
