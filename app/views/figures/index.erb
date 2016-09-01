@@ -1,9 +1,24 @@
-<h1>Figures</h1>
-<% @figures.each do |figure| %>
-  <a href="/figures/<%= figure.id %>"><%= figure.name %></a>
-  <% figure.titles.each do |title| %>
-  <%= title.name %>
-<% end %>
-<br>
+<h1>All Figures:</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Landmarks</th>
+    <th>Titles</th>
+  </tr>
+  <tr>
+    <% @figures.each do |figure| %>
+    <td><a href="/figures/<%= figure.id %>"><%= figure.name %></a></td>
+    <% figure.landmarks.each do |landmark| %>
+    <td><%= landmark.name %></td>
+    <% end %>
+    <% figure.titles.each do |title| %>
+    <td><%= title.name %></td>
+    <% end %>
+  </tr>
+  <% end %>
+<table>
+
+  <br></br>
 
 <a class="button" href="/">Go Home</a>

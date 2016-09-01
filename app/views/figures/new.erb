@@ -8,7 +8,7 @@
   Figure's Landmarks:
   <br></br>
   <% Landmark.all.each do |landmark| %>
-    <input type="checkbox" name="figure[landmark_ids][]" value=<%= landmark.id %> id=<%= landmark.name %>><%= landmark.name %><br>
+    <input type="checkbox" name="figure[landmark_ids][]" value="landmark_<%= landmark.id %>" id="landmark_<%= landmark.id %>"><%= landmark.name %><br>
   <% end %>
 
   <br>
